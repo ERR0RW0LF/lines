@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://m3mx2c1p81xl"]
+[gd_scene load_steps=2 format=3 uid="uid://m3mx2c1p81xl"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_rvw0m"]
+enabled = true
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="CharacterBody2D"]
+position = Vector2(0, -32)
+modification_stack = SubResource("SkeletonModificationStack2D_rvw0m")
+
+[node name="Bone2D" type="Bone2D" parent="CharacterBody2D/Skeleton2D"]
+position = Vector2(-1.42109e-14, -4.76837e-07)
+rotation = 1.5708
+scale = Vector2(2, 2)
