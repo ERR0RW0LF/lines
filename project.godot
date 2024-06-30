@@ -13,3 +13,16 @@ config_version=5
 config/name="lines"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[layer_names]
+
+2d_physics/layer_1="Invironment"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
+2d_physics/layer_4="Project"
+2d_physics/layer_5="Extras"
