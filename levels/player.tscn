@@ -5,7 +5,9 @@
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Line2D" type="Line2D" parent="CharacterBody2D"]
-points = PackedVector2Array(-72, -14, -30, -40, 16, -39, 14, -3, -3, 16, 34, 13, 49, -29, 38, -81, 74, -84, 94, -9, 83, 27, 54, 62)
+points = PackedVector2Array(-72, -14, -30, -40, -9, -53, 14, -3, 18, -1, 24, -7, 38, -54)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
