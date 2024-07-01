@@ -1,7 +1,20 @@
-[gd_scene format=3 uid="uid://m3mx2c1p81xl"]
+[gd_scene load_steps=5 format=3 uid="uid://m3mx2c1p81xl"]
+
+[ext_resource type="Script" path="res://levels/player.gd" id="1_laf7w"]
+[ext_resource type="Script" path="res://levels/PlayerCharacter.gd" id="2_5et2r"]
+[ext_resource type="PackedScene" uid="uid://daqkbqew5r5cu" path="res://Components/spellcast_ui.tscn" id="3_wj2x0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qwpyy"]
 
 [node name="player" type="Node2D"]
+script = ExtResource("1_laf7w")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_5et2r")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_qwpyy")
+
+[node name="SpellcastUI" parent="." instance=ExtResource("3_wj2x0")]

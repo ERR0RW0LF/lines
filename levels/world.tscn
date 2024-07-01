@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://bhc8ns1u4dfqa"]
+[gd_scene load_steps=4 format=3 uid="uid://bhc8ns1u4dfqa"]
+
+[ext_resource type="Script" path="res://levels/PlayerContainer.gd" id="1_6qlfr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hrxai"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2wgqe"]
+normal = Vector2(1, 0)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 1050)
+shape = SubResource("WorldBoundaryShape2D_hrxai")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_2wgqe")
+
+[node name="PlayerContainer" type="Node2D" parent="."]
+position = Vector2(192, 161)
+script = ExtResource("1_6qlfr")
