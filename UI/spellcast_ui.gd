@@ -3,5 +3,5 @@ extends Control
 
 func _process(delta):
 	if Itemlist.mouse_exited:
-		Itemlist.select(Itemlist.is_selected())
+		pass
 
