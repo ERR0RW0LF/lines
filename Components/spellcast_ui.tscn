@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://daqkbqew5r5cu"]
+
+[ext_resource type="Script" path="res://Components/spellcast_ui.gd" id="1_koutb"]
+[ext_resource type="Texture2D" uid="uid://bstx6864aiowm" path="res://assets/icon.svg" id="2_kqxpr"]
+
+[node name="SpellcastUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_koutb")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 274.0
+offset_bottom = 270.0
+item_count = 4
+max_columns = 2
+same_column_width = true
+fixed_column_width = 125
+item_0/text = ""
+item_0/icon = ExtResource("2_kqxpr")
+item_1/text = ""
+item_1/icon = ExtResource("2_kqxpr")
+item_2/text = ""
+item_2/icon = ExtResource("2_kqxpr")
+item_3/text = ""
+item_3/icon = ExtResource("2_kqxpr")
