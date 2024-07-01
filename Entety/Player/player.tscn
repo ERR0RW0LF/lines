@@ -1,20 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://m3mx2c1p81xl"]
 
-[ext_resource type="Script" path="res://levels/player.gd" id="1_laf7w"]
-[ext_resource type="Script" path="res://levels/PlayerCharacter.gd" id="2_5et2r"]
-[ext_resource type="PackedScene" uid="uid://daqkbqew5r5cu" path="res://Components/spellcast_ui.tscn" id="3_wj2x0"]
+[ext_resource type="Script" path="res://Entety/Player/player.gd" id="1_2rtaw"]
+[ext_resource type="Script" path="res://Entety/Player/PlayerCharacter.gd" id="2_v56er"]
+[ext_resource type="PackedScene" uid="uid://daqkbqew5r5cu" path="res://UI/spellcast_ui.tscn" id="3_r3m41"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qwpyy"]
 
 [node name="player" type="Node2D"]
-script = ExtResource("1_laf7w")
+script = ExtResource("1_2rtaw")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("2_5et2r")
+script = ExtResource("2_v56er")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_qwpyy")
 
-[node name="SpellcastUI" parent="." instance=ExtResource("3_wj2x0")]
+[node name="SpellcastUI" parent="." instance=ExtResource("3_r3m41")]
